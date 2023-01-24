@@ -3,7 +3,7 @@
 #include <thread>
 #include <cstdlib>
 #include "operacije_baza.hpp"
-#define DUZINA 3
+#define DUZINA 3 //Duzina koliko meseci traje trail period max 12
 using namespace std;
 void start(VREME &vreme, FILE* file);
 void check(FILE *file);
