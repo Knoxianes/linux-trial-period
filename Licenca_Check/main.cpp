@@ -23,9 +23,9 @@ int main()
         scanf("%s",kljuc);
         if(strcmp(kljuc,tmp->kljuc) == 0){
             cout << "Uspesno unet kljuc" << endl;
-            // OVDE TREBA DA STOJI FUNCKIJA KOJA CE DA DISEJBLUJE SERVICE
-            system("service serice_name stop");
-            system("systemctl disable service_name");
+            // Ovde treba promeniti nazive servisa ako zelite
+            system("service linux-service stop");
+            system("systemctl disable linux-service");
             obrisiSlogLogicki(file,111);
             terminate();
             break;
