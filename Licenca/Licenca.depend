@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1674473486 source:/root/Desktop/ProjekatCNC/Licenca/main.cpp
+	<iostream>
+	<string>
+	<thread>
+	<cstdlib>
+	"operacije_baza.hpp"
+
+1674384629 /root/Desktop/ProjekatCNC/Licenca/vreme.hpp
+	"vreme.hpp"
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"math.h"
+	"time.h"
+	<fcntl.h>
+	"linux/rtc.h"
+	"sys/ioctl.h"
+	"unistd.h"
+
+1674471538 source:/root/Desktop/ProjekatCNC/Licenca/operacije_baza.cpp
+	"operacije_baza.hpp"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<sys/types.h>
+
+1674406358 /root/Desktop/ProjekatCNC/Licenca/operacije_baza.hpp
+	<string>
+	<iostream>
+	"stdio.h"
+	"stdlib.h"
+	"string.h"
+	"math.h"
+	"time.h"
+	<fcntl.h>
+	"linux/rtc.h"
+	"sys/ioctl.h"
+	<sys/types.h>
+	"unistd.h"
+
