@@ -2,7 +2,7 @@
 
 Program za zadavanje trial perioda na linux sistemima u maksimalnom periodu od 12 meseci.
 
-Use case: Bilo kakve masine koje kosite linux sisteme, kao na primer CNC ruteri.
+Use case: Bilo kakve mašine koje koriste linux sistem, kao na primer CNC ruteri.
 
 	Pre korišćenja promeni sve pathove do baze podataka kao i pathove do exe fajlova.
 	Program treba kompjlirati na sledeći naćin:
