@@ -6,7 +6,9 @@ void restart(FILE *file);
 int main()
 {
     char kljuc[7+1];
-    string path = "/root/Desktop/ProjekatCNC/Licenca/test.dat";
+    // Path do baze podataka- preporuka je da bude negde u fajlovima systema
+    // Mora biti isti path kao u Licenca/main.c fajlu
+    string path = "/root/Desktop/Licenca/test.dat";
     FILE* file = otvoriDatoteku(path.c_str());
     SLOG *tmp = pronadjiSlog(file,111);
     if(tmp == NULL){

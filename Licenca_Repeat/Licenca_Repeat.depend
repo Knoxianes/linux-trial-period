@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1674475053 source:/root/Desktop/ProjekatCNC/Licenca_Repeat/main.cpp
-	<iostream>
-	<stdlib.h>
-	<unistd.h>
-

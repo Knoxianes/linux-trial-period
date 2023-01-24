@@ -10,7 +10,8 @@ void check(FILE *file);
 int main()
 {
     VREME vreme;
-    string path = "/root/Desktop/ProjekatCNC/Licenca/test.dat";
+    // Path gde zelite da se kreira baza podataka, preporuka negde u system fajlovima
+    string path = "/root/Desktop/Licenca/test.dat";
     FILE* file = otvoriDatoteku(path.c_str());
     start(vreme,file);
     return 0;
@@ -20,15 +21,11 @@ void start(VREME &vreme, FILE* file){
     SLOG *slog = pronadjiSlog(file,111);
     if( slog == NULL){
         SLOG tmp;
-        int eviBroj;
         char kljuc[7+1];
         fflush(stdin);
         cout << "Unesite kljuc (7 karaktera): ";
         scanf("%s",kljuc);
-        cout << "Unesite eviBroj: ";
-        fflush(stdin);
-        scanf("%d", &eviBroj);
-        tmp.eviBroj = eviBroj;
+        tmp.eviBroj = 111;
         strcpy(tmp.kljuc,kljuc);
         tmp.vreme.dan = vreme.dan;
         tmp.vreme.sati = vreme.sati;
@@ -53,6 +50,7 @@ void start(VREME &vreme, FILE* file){
 }
 void check(FILE* file){
     fclose(file);
-    system("xterm -hold -e \"/root/Desktop/ProjekatCNC/Licenca_Check/bin/Debug/Licenca_Check\"");
+    // Path do Licenca_Check.exe fajla da bi pokrenuo sledecu aplikaciju
+    system("xterm -hold -e \"/root/Desktop/Licenca_Check/bin/Debug/Licenca_Check\"");
 }
 
