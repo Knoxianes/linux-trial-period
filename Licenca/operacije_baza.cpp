@@ -37,6 +37,8 @@ FILE *otvoriDatoteku(const char *filename){
         SLOG blok;
 		blok.eviBroj = OZNAKA_KRAJA_DATOTEKE;
 		fwrite(&blok, sizeof(SLOG), 1, file);
+        fclose(file);
+        file = fopen(filename,"rb+");
         return file;
     }else{
         return file;

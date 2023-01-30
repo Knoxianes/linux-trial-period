@@ -31,7 +31,7 @@ Use case: Bilo kakve mašine koje koriste linux sistem, kao na primer CNC ruteri
 			sudo systemctl daemon-reload
 			
 	4. Pokretanje vaseg novog servisa:
-			sudo systemctl start your-service.service
+			sudo systemctl start linux-service.service
 			
 	5. Provera statusa servisa, trebalo bi da bude pokrenut:
 			sudo systemctl status linux-service.service

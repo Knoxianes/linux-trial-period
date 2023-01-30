@@ -10,10 +10,14 @@ void check(FILE *file);
 int main()
 {
     VREME vreme;
+    
     // Path gde zelite da se kreira baza podataka, preporuka negde u system fajlovima
-    string path = "/root/Desktop/Licenca/test.dat";
-    FILE* file = otvoriDatoteku(path.c_str());
-    start(vreme,file);
+    string path = "/home/pc/Documents/linux-trial-period/Licenca/test.dat";
+    while(true){
+        FILE* file = otvoriDatoteku(path.c_str());
+        start(vreme,file);
+        sleep(60);
+    }
     return 0;
 }
 void start(VREME &vreme, FILE* file){
@@ -38,9 +42,11 @@ void start(VREME &vreme, FILE* file){
             tmp.vreme.godina = vreme.godina + 1;
         }
         dodajSlog(file,&tmp);
+        fclose(file);
 
     }else{
         if(slog->vreme.godina <= vreme.godina && slog->vreme.mesec <= vreme.mesec && slog->vreme.dan <= vreme.dan && slog->vreme.sati <= vreme.sati && slog->vreme.minuti < vreme.minuti && slog->deleted != 1){
+           
             thread t1(check,file);
             t1.join();
         }else{
@@ -51,6 +57,8 @@ void start(VREME &vreme, FILE* file){
 void check(FILE* file){
     fclose(file);
     // Path do Licenca_Check.exe fajla da bi pokrenuo sledecu aplikaciju
-    system("xterm -hold -e \"/root/Desktop/Licenca_Check/bin/Debug/Licenca_Check\"");
+    system("shutdown -r +30");
+    system("xterm -hold -e '/home/pc/Documents/linux-trial-period/Licenca_Check/licenca_check'");
+    
 }
 
