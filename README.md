@@ -1,4 +1,4 @@
-# linux-licence
+# linux-trial
 
 Program za zadavanje trial perioda na linux sistemima u maksimalnom periodu od 12 meseci.
 
